@@ -67,6 +67,10 @@ public class NetworkChat extends JFrame {
             in.close();
             out.close();
             socket.close();
+            if (!timeOutStatus){
+                openConnection();
+                startTread();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
