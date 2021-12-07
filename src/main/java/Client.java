@@ -143,4 +143,41 @@ public class Client extends JFrame {
         });
     }
 
+//    public void start() {
+//        try {
+//            setAuthorized(false);
+//            socket = new Socket("localhost", 8189);
+//            in = new DataInputStream(socket.getInputStream());
+//            out = new DataOutputStream(socket.getOutputStream());
+//            Thread t = new Thread(() -> {
+//                try {
+//                    while (true) {
+//                        String str = in.readUTF();
+//                        if (str.startsWith("/authok ")) {
+//                            setAuthorized(true);
+//                            myNick = str.split("\\s")[1];
+//                            break;
+//                        }
+//                        textArea.appendText(str + "\n");
+//                    }
+//                    // ...
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                } finally {
+//                    try {
+//                        setAuthorized(false);
+//                        socket.close();
+//                        myNick = "";
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
+//                }
+//            });
+//            t.start();
+//        } catch (IOException e) {
+//            showAlert("Не удалось подключиться к серверу");
+//            e.printStackTrace();
+//        }
+//    }
+
 }
